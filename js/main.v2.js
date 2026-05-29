@@ -53,7 +53,7 @@ document.querySelectorAll(".vlog-card").forEach(card => {
         video.currentTime = 0;
         
         // 尝试播放视频
-        video.play()
+        video.style.display='block';video.style.opacity='1';video.play()
             .then(() => {
                 // 播放成功后，稍等片刻取消静音
                 setTimeout(() => {
@@ -74,7 +74,7 @@ document.querySelectorAll(".vlog-card").forEach(card => {
     video.addEventListener("click", (e) => {
         e.stopPropagation(); // 防止事件冒泡到父元素
         if (video.paused) {
-            video.play();
+            video.style.display='block';video.style.opacity='1';video.play();
             hidePoster();
         } else {
             video.pause();
